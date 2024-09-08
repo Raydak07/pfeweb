@@ -1,0 +1,147 @@
+
+
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+              <div class="container">
+                <h1>Update message</h1>
+               
+                <br><a href="#" routerLink="/message/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr><br>
+                      
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                
+                    <div class="form-group">
+                        <label for="nomenvoi">nomenvoi:</label>
+                        <input 
+                            formControlName="nomenvoi"
+                            id="nomenvoi" 
+                            type="text" 
+                            class="form-control">
+                        <div *ngIf="f['nomenvoi'].touched && f['nomenvoi'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['nomenvoi'].errors && f['nomenvoi'].errors['required']">nomenvoi is required.</div>
+                        </div>
+                    </div>
+                      <div class="form-group">
+                        <label for="sujet">sujet:</label>
+                        <input 
+                            formControlName="sujet"
+                            id="sujet" 
+                            type="text" 
+                            class="form-control">
+                        <div *ngIf="f['sujet'].touched && f['sujet'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['sujet'].errors && f['sujet'].errors['required']">sujet is required.</div>
+                        </div>
+                    </div>
+            
+                            <div class="form-group">
+                        <label for="texte">texte:</label>
+                        <input 
+                            formControlName="texte"
+                            id="texte" 
+                            type="text" 
+                            class="form-control">
+                        <div *ngIf="f['texte'].touched && f['texte'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['texte'].errors && f['texte'].errors['required']">texte is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="etat">etat:</label>
+                        <input 
+                            formControlName="etat"
+                            id="etat" 
+                            type="text" 
+                            class="form-control">
+                        <div *ngIf="f['etat'].touched && f['etat'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['etat'].errors && f['etat'].errors['required']">etat is required.</div>
+                        </div>
+                    </div>
+            
+            
+                            <div class="form-group">
+                        <label for="datecreation">datecreation:</label>
+                        <input 
+                            formControlName="datecreation"
+                            id="datecreation" 
+                            type="date" 
+                            class="form-control">
+                        <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+                        </div>
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="datemodification">datemodification:</label>
+                        <input 
+                            formControlName="datemodification"
+                            id="datemodification" 
+                            type="date" 
+                            class="form-control">
+                        <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+                        </div>
+                    </div>
+              
+            
+                     
+                    <button class="btn btn-warning" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr><br><br><hr>
+                </form>
+            </div>
+            
+            
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-userfooter></app-userfooter>

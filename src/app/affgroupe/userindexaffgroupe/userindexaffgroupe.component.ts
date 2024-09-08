@@ -1,0 +1,64 @@
+
+
+import { UserfooterComponent } from '../../user/userfooter/userfooter.component';
+import { UserheaderComponent } from '../../user/userheader/userheader.component';
+import { UsermenuComponent } from '../../user/usermenu/usermenu.component';
+
+
+
+
+
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+import { AffgroupeService } from '../affgroupe.service';
+import { Affgroupe } from '../affgroupe';
+import { AdminfooterComponent } from '../../admin/adminfooter/adminfooter.component';
+import { AdminheaderComponent } from '../../admin/adminheader/adminheader.component';
+import { AdminmenuComponent } from '../../admin/adminmenu/adminmenu.component';
+
+@Component({
+  selector: 'app-userindexaffgroupe',
+  standalone: true,
+  imports: [UserfooterComponent,UsermenuComponent,UserheaderComponent,CommonModule, RouterModule],
+  templateUrl: './userindexaffgroupe.component.html',
+  styleUrl: './userindexaffgroupe.component.css'
+})
+export class UserindexaffgroupeComponent {
+
+
+  affgroupes: Affgroupe[] = [];
+    
+  /*------------------------------------------
+  --------------------------------------------
+  Created constructor
+  --------------------------------------------
+  --------------------------------------------*/
+  constructor(public affgroupeService: AffgroupeService, private router: Router) { }
+    
+  /**
+   * Write code on Method
+   *
+   * @return response()
+   */
+  ngOnInit(): void {
+    console.log(this.router.url);
+    console.log( window.location.href);
+    this.affgroupeService.getAll().subscribe((data: Affgroupe[])=>{
+      this.affgroupes = data;
+      console.log(this.affgroupes);
+    })  
+  }
+    
+  /**
+   * Write code on Method
+   *
+   * @return response()
+   */
+  deleteAffgroupe(id:number){
+    this.affgroupeService.delete(id).subscribe(res => {
+         this.affgroupes = this.affgroupes.filter(item => item._id !== id);
+         console.log('Affgroupe deleted successfully!');
+    })
+  }
+}

@@ -1,0 +1,196 @@
+
+
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+  
+
+
+
+
+
+<div class="container">
+    <h1>Update Avtache</h1>
+   
+    <a href="#" routerLink="/useravtache/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr>
+          
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+            <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                [(ngModel)]="avtache.nom"
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+             <div class="form-group">
+            <label for="idtache">idtache:</label>
+            <input 
+                formControlName="idtache"
+                id="idtache" 
+                type="text" 
+                [(ngModel)]="avtache.idtache"
+                class="form-control">
+            <div *ngIf="f['idtache'].touched && f['idtache'].invalid" class="alert alert-danger">
+                <div *ngIf="f['idtache'].errors && f['idtache'].errors['required']">idtache is required.</div>
+            </div>
+        </div> 
+    </div>
+    <div class="col-sm">
+        <div class="form-group">
+            <label for="pourcentagevanacement">pourcentagevanacement:</label>
+        <select formControlName="pourcentagevanacement" id="pourcentagevanacement"  name="pourcentagevanacement" class="form-select" aria-label="Default select example">
+  <option selected>séléctionner pourcentagevanacement</option>
+  <option value="10">10%</option>
+  <option value="20">20%</option>
+  <option value="30">30%</option>
+  <option value="40">40%</option>
+  <option value="50">50%</option>
+  <option value="60">60%</option>
+  <option value="70">70%</option>
+  <option value="80">80%</option>
+  <option value="90">90%</option>
+  <option value="100">100%</option>
+
+</select>
+        </div>     
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+              <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                [(ngModel)]="avtache.datecreation"
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+              <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="date" 
+                [(ngModel)]="avtache.datemodification"
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div> 
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+           
+
+
+         
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<app-userfooter></app-userfooter>

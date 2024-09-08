@@ -1,0 +1,104 @@
+
+
+
+<app-companyheader></app-companyheader>
+<app-companymenu></app-companymenu>
+
+
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+              <div class="container">
+                <br><br><h1 class="btn btn-info">UPWORK TUNISIE PFE UIT 2024</h1><br><br>
+                  
+                <table class="table table-striped table-bordered">
+                    <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>nom</th>
+                            <th>Body</th>
+                            <th>Action</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                          <tr *ngFor="let groupe of groupes">
+                            <td>{{ groupe._id }}</td>
+                            <td>{{ groupe.nom }}</td>
+                            <td>{{ groupe.description }}</td>
+                            <td>
+                              <a href="#" [routerLink]="['/companygroupe/', groupe._id, 'view']" class="btn btn-info">Détails</a>&nbsp;&nbsp;
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+              <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+
+
+
+
+
+
+            </div>
+            
+              
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<app-companyfooter></app-companyfooter>

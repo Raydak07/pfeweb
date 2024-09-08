@@ -1,0 +1,76 @@
+
+
+
+<app-companyheader></app-companyheader>
+<app-companymenu></app-companymenu>
+
+<div class="main-content">
+  <section class="section">
+    <div class="section-body">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+
+
+
+<div class="container">
+  <h1>Update Company</h1>
+ 
+  <a href="#" routerLink="/companycompany/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr>
+        
+  <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+          <label for="email">email:</label>
+          <input 
+              formControlName="email"
+              id="email" 
+              type="text" 
+              [(ngModel)]="company.email"
+              class="form-control">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+          </div>
+      </div>
+
+
+       
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<app-companyfooter></app-companyfooter>

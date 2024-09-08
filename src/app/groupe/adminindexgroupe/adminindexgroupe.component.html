@@ -1,0 +1,102 @@
+
+
+
+
+
+<app-adminheader></app-adminheader>
+<app-adminmenu></app-adminmenu>
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+
+
+<div class="container">
+    <h1>LISTE DES GROUPES ::</h1>
+    <a href="#" routerLink="/groupe/create/" class="btn btn-success">Create Nouveau Groupe</a><br><br><hr>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>nom</th>
+                <th>Body</th>
+                <th>datecreation</th>
+                <th>datemodification</th>
+                <th>Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let groupe of groupes">
+                <td>{{ groupe._id }}</td>
+                <td>{{ groupe.nom }}</td>
+                <td>{{ groupe.description }}</td>
+                <td>{{ groupe.datecreation }}</td>
+                <td>{{ groupe.datemodification }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/groupe/', groupe._id, 'view']" class="btn btn-info">Détails</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/groupe/', groupe._id, 'edit']" class="btn btn-primary">Modifier</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteGroupe(groupe._id)" class="btn btn-danger">Supprimer Data</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+              <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+
+
+
+
+
+
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+<app-adminfooter></app-adminfooter>

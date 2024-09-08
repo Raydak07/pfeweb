@@ -1,0 +1,237 @@
+
+
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+  
+  
+
+
+
+
+<div class="container">
+    <h1>Update Profil</h1>
+   
+    <a href="#" routerLink="/userprofil/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr>
+          
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                [(ngModel)]="profil.nom"
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+              <div class="form-group">
+            <label for="prenom">prenom:</label>
+            <input 
+                formControlName="prenom"
+                id="prenom" 
+                type="text" 
+                [(ngModel)]="profil.prenom"
+                class="form-control">
+            <div *ngIf="f['prenom'].touched && f['prenom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['prenom'].errors && f['prenom'].errors['required']">prenom is required.</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+          <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                [(ngModel)]="profil.description"
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>    
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+          <div class="form-group">
+            <label for="adresse">adresse:</label>
+            <input 
+                formControlName="adresse"
+                id="adresse" 
+                type="text" 
+                [(ngModel)]="profil.adresse"
+                class="form-control">
+            <div *ngIf="f['adresse'].touched && f['adresse'].invalid" class="alert alert-danger">
+                <div *ngIf="f['adresse'].errors && f['adresse'].errors['required']">adresse is required.</div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="tel">tel:</label>
+            <input 
+                formControlName="tel"
+                id="tel" 
+                type="text" 
+                [(ngModel)]="profil.tel"
+                class="form-control">
+            <div *ngIf="f['tel'].touched && f['tel'].invalid" class="alert alert-danger">
+                <div *ngIf="f['tel'].errors && f['tel'].errors['required']">tel is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="email">email:</label>
+            <input 
+                formControlName="email"
+                id="email" 
+                type="text" 
+                [(ngModel)]="profil.email"
+                class="form-control">
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+            </div>
+        </div>     
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="siteweb">siteweb:</label>
+            <input 
+                formControlName="siteweb"
+                id="siteweb" 
+                type="text" 
+                [(ngModel)]="profil.siteweb"
+                class="form-control">
+            <div *ngIf="f['siteweb'].touched && f['siteweb'].invalid" class="alert alert-danger">
+                <div *ngIf="f['siteweb'].errors && f['siteweb'].errors['required']">siteweb is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+          <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                [(ngModel)]="profil.datecreation"
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="date" 
+                [(ngModel)]="profil.datemodification"
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+         
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr>
+    </form>
+</div>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-userfooter></app-userfooter>

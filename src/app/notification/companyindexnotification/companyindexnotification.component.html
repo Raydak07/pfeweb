@@ -1,0 +1,110 @@
+
+
+
+<app-companyheader></app-companyheader>
+<app-companymenu></app-companymenu>
+
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+              <div class="container">
+                <br><br><h1 class="btn btn-info">UPWORK TUNISIE PFE UIT 2024</h1><br><br>
+                  
+                <table class="table" id="table-2">
+                    <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>texte</th>
+                            <th>datecreation</th>
+                            <th>datemodification</th>
+                            <th>Action</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                          <tr *ngFor="let notification of notifications">
+                            <td>{{notification._id}}</td>
+                            <td>{{notification.texte}}</td>
+                            <td>{{notification.datecreation}}</td>
+                            <td>{{notification.datemodification}}</td>
+                            <td>
+                              <button type="button" (click)="deleteNotification(notification._id)" class="btn btn-danger">Supprimer Data</button>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+              <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-companyfooter></app-companyfooter>
