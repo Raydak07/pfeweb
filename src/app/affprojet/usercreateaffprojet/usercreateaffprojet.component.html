@@ -1,0 +1,197 @@
+
+
+
+<app-userheader></app-userheader>
+<app-usermenu></app-usermenu>
+
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+
+
+<div class="container">
+    <br><h1>Create New Data:</h1>
+  
+    <br><br><a href="#" routerLink="/useraffprojet/index" class="btn btn-warning">Retour Vers Liste</a><br><br>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+                  <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm">
+                 <div class="form-group">
+            <label for="iduser">iduser:</label>
+            <input 
+                formControlName="iduser"
+                id="iduser" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['iduser'].touched && f['iduser'].invalid" class="alert alert-danger">
+                <div *ngIf="f['iduser'].errors && f['iduser'].errors['required']">iduser is required.</div>
+            </div>
+        </div>     
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+                 <div class="form-group">
+            <label for="idprojet">idprojet:</label>
+            <input 
+                formControlName="idprojet"
+                id="idprojet" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['idprojet'].touched && f['idprojet'].invalid" class="alert alert-danger">
+                <div *ngIf="f['idprojet'].errors && f['idprojet'].errors['required']">idprojet is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+  
+        <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm">
+          <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="date" 
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>    
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+  
+        <br><br><hr><button class="btn btn-primary" type="submit" [disabled]="!form.valid">Valider Opération</button><br><br><hr>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+<app-userfooter></app-userfooter>

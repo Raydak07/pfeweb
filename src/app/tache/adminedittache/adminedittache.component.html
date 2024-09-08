@@ -1,0 +1,192 @@
+
+
+
+
+
+
+<app-adminheader></app-adminheader>
+<app-adminmenu></app-adminmenu>
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+
+<div class="container">
+    <h1>Update Tache</h1>
+   
+    <a href="#" routerLink="/tache/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr>
+          
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="nom">nom:</label>
+            <input 
+                formControlName="nom"
+                id="nom" 
+                type="text" 
+                [(ngModel)]="tache.nom"
+                class="form-control">
+            <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="description">description:</label>
+            <input 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                [(ngModel)]="tache.description"
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>     
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="idprojet">idprojet:</label>
+            <input 
+                formControlName="idprojet"
+                id="idprojet" 
+                type="text" 
+                [(ngModel)]="tache.idprojet"
+                class="form-control">
+            <div *ngIf="f['idprojet'].touched && f['idprojet'].invalid" class="alert alert-danger">
+                <div *ngIf="f['idprojet'].errors && f['idprojet'].errors['required']">idprojet is required.</div>
+            </div>
+        </div>     
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+
+
+        <div class="form-group">
+            <label for="etat">etat:</label>
+        <select formControlName="etat" id="etat"  name="etat" class="form-select" aria-label="Default select example">
+  <option selected>séléctionner etat</option>
+  <option>en cours</option>
+  <option>validé</option>
+  <option>annulé</option>
+  <option>fini</option>
+</select>
+        </div> 
+
+
+   
+    </div>
+    <div class="col-sm">
+          <div class="form-group">
+            <label for="datecreation">datecreation:</label>
+            <input 
+                formControlName="datecreation"
+                id="datecreation" 
+                type="date" 
+                [(ngModel)]="tache.datecreation"
+                class="form-control">
+            <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+            </div>
+        </div>    
+    </div>
+    <div class="col-sm">
+         <div class="form-group">
+            <label for="datemodification">datemodification:</label>
+            <input 
+                formControlName="datemodification"
+                id="datemodification" 
+                type="date" 
+                [(ngModel)]="tache.datemodification"
+                class="form-control">
+            <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+                <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+            </div>
+        </div>      
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+           
+
+
+         
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr>
+    </form>
+</div>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+<app-adminfooter></app-adminfooter>

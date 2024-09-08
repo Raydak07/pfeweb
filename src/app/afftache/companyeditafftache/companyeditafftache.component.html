@@ -1,0 +1,186 @@
+
+
+
+<app-companyheader></app-companyheader>
+<app-companymenu></app-companymenu>
+
+
+<div class="main-content">
+  <section class="section">
+    <div class="section-body">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+
+
+
+
+<div class="container">
+  <h1>Update Afftache</h1>
+ 
+  <a href="#" routerLink="/companyafftache/index" class="btn btn-primary">Retour Vers Liste</a><br><br><hr>
+        
+  <form [formGroup]="form" (ngSubmit)="submit()">
+  
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+            <div class="form-group">
+          <label for="nom">nom:</label>
+          <input 
+              formControlName="nom"
+              id="nom" 
+              type="text" 
+              [(ngModel)]="afftache.nom"
+              class="form-control">
+          <div *ngIf="f['nom'].touched && f['nom'].invalid" class="alert alert-danger">
+              <div *ngIf="f['nom'].errors && f['nom'].errors['required']">nom is required.</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm">
+       <div class="form-group">
+          <label for="description">description:</label>
+          <input 
+              formControlName="description"
+              id="description" 
+              type="text" 
+              [(ngModel)]="afftache.description"
+              class="form-control">
+          <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+              <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+          </div>
+      </div>     
+    </div>
+    <div class="col-sm">
+        <div class="form-group">
+          <label for="iduser">iduser:</label>
+          <input 
+              formControlName="iduser"
+              id="iduser" 
+              type="text" 
+              [(ngModel)]="afftache.iduser"
+              class="form-control">
+          <div *ngIf="f['iduser'].touched && f['iduser'].invalid" class="alert alert-danger">
+              <div *ngIf="f['iduser'].errors && f['iduser'].errors['required']">iduser is required.</div>
+          </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+            <div class="form-group">
+          <label for="idtache">idtache:</label>
+          <input 
+              formControlName="idtache"
+              id="idtache" 
+              type="text" 
+              [(ngModel)]="afftache.idtache"
+              class="form-control">
+          <div *ngIf="f['idtache'].touched && f['idtache'].invalid" class="alert alert-danger">
+              <div *ngIf="f['idtache'].errors && f['idtache'].errors['required']">idtache is required.</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm">
+               
+      <div class="form-group">
+          <label for="datecreation">datecreation:</label>
+          <input 
+              formControlName="datecreation"
+              id="datecreation" 
+              type="date" 
+              [(ngModel)]="afftache.datecreation"
+              class="form-control">
+          <div *ngIf="f['datecreation'].touched && f['datecreation'].invalid" class="alert alert-danger">
+              <div *ngIf="f['datecreation'].errors && f['datecreation'].errors['required']">datecreation is required.</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm">
+            <div class="form-group">
+          <label for="datemodification">datemodification:</label>
+          <input 
+              formControlName="datemodification"
+              id="datemodification" 
+              type="date" 
+              [(ngModel)]="afftache.datemodification"
+              class="form-control">
+          <div *ngIf="f['datemodification'].touched && f['datemodification'].invalid" class="alert alert-danger">
+              <div *ngIf="f['datemodification'].errors && f['datemodification'].errors['required']">datemodification is required.</div>
+          </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+       
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Mettre A Jour</button><br><br><hr>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<app-companyfooter></app-companyfooter>

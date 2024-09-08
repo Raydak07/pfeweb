@@ -27,9 +27,71 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css",
+              "src/assets/css/app.min.css",
+"src/assets/css/style.css",
+"src/assets/css/components.css",
+"src/assets/css/custom.css",
+"src/assets/bundles/datatables/datatables.min.css",
+"src/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css",
+
+    "src/assets/front/css/bootstrap.min.css",
+    "src/assets/front/css/owl.carousel.min.css",
+    "src/assets/front/css/magnific-popup.css",
+    "src/assets/front/css/font-awesome.min.css",
+    "src/assets/front/css/themify-icons.css",
+    "src/assets/front/css/nice-select.css",
+    "src/assets/front/css/flaticon.css",
+    "src/assets/front/css/gijgo.css",
+    "src/assets/front/css/animate.min.css",
+    "src/assets/front/css/slicknav.css",
+    "src/assets/front/css/style.css"
+
+
+
+
+
             ],
-            "scripts": []
+            "scripts": [
+
+              "src/assets/js/app.min.js",
+              "src/assets/bundles/apexcharts/apexcharts.min.js",
+              "src/assets/js/page/index.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/custom.js",
+              "src/assets/bundles/datatables/datatables.min.js",
+              "src/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js",
+              "src/assets/bundles/jquery-ui/jquery-ui.min.js",
+              "src/assets/js/page/datatables.js",
+
+
+    "src/assets/front/js/popper.min.js",
+    "src/assets/front/js/bootstrap.min.js",
+    "src/assets/front/js/owl.carousel.min.js",
+    "src/assets/front/js/isotope.pkgd.min.js",
+    "src/assets/front/js/ajax-form.js",
+    "src/assets/front/js/waypoints.min.js",
+    "src/assets/front/js/jquery.counterup.min.js",
+    "src/assets/front/js/imagesloaded.pkgd.min.js",
+    "src/assets/front/js/scrollIt.js",
+    "src/assets/front/js/jquery.scrollUp.min.js",
+    "src/assets/front/js/wow.min.js",
+    "src/assets/front/js/nice-select.min.js",
+    "src/assets/front/js/jquery.slicknav.min.js",
+    "src/assets/front/js/jquery.magnific-popup.min.js",
+    "src/assets/front/js/plugins.js",
+    "src/assets/front/js/gijgo.min.js",
+    "src/assets/front/js/contact.js",
+    "src/assets/front/js/jquery.ajaxchimp.min.js",
+    "src/assets/front/js/jquery.form.js",
+    "src/assets/front/js/jquery.validate.min.js",
+    "src/assets/front/js/mail-script.js",
+    "src/assets/front/js/main.js"
+            
+
+            ]
           },
           "configurations": {
             "production": {
@@ -82,6 +144,17 @@
               {
                 "glob": "**/*",
                 "input": "public"
+                
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "*.svg",
+                "input": "./node_modules/bootstrap-icons/",
+                "output": "/"
               }
             ],
             "styles": [
@@ -92,5 +165,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

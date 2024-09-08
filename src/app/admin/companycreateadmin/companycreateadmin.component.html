@@ -1,0 +1,135 @@
+
+
+
+<app-companyheader></app-companyheader>
+<app-companymenu></app-companymenu>
+
+
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+
+<div class="main-content">
+  <section class="section">
+    <div class="section-body">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+
+
+
+
+
+<div class="container">
+  <br><h1>Create New Data:</h1>
+
+  <br><br><a href="#" routerLink="/companyadmin/index" class="btn btn-warning">Retour Vers Liste</a><br><br>
+      
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <div class="form-group">
+          <label for="email">email:</label>
+          <input 
+              formControlName="email"
+              id="email" 
+              type="text" 
+              class="form-control">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="motdepasse">motdepasse:</label>
+          <input 
+              formControlName="motdepasse"
+              id="motdepasse" 
+              type="text" 
+              class="form-control">
+          <div *ngIf="f['motdepasse'].touched && f['motdepasse'].invalid" class="alert alert-danger">
+              <div *ngIf="f['motdepasse'].errors && f['motdepasse'].errors['required']">motdepasse is required.</div>
+          </div>
+      </div>
+
+      <br><br><hr><button class="btn btn-primary" type="submit" [disabled]="!form.valid">Valider Opération</button><br><br><hr>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+            
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-companyfooter></app-companyfooter>

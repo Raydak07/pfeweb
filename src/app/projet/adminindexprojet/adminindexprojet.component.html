@@ -1,0 +1,102 @@
+
+
+
+
+
+
+<app-adminheader></app-adminheader>
+<app-adminmenu></app-adminmenu>
+
+<div class="main-content">
+    <section class="section">
+      <div class="section-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+  
+  
+  
+  
+  
+<div class="container">
+    <br><h1 class="btn btn-danger">UPWORK TUNISIE PFE UIT 2024 :: LITE DES PROJETS DISPONIBLES</h1><br><br>
+    <a href="#" routerLink="/projet/create/" class="btn btn-info">Create Nouveau Projet</a><br><br>
+      
+    <table class="table table-striped table-bordered">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>nom</th>
+                <th>description</th>
+                <th>datedebut</th>
+                <th>datefin</th>
+                <th>Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let projet of projets">
+                <td>{{ projet._id }}</td>
+                <td>{{ projet.nom }}</td>
+                <td>{{ projet.description }}</td>
+                <td>{{ projet.datedebut }}</td>
+                <td>{{ projet.datefin }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/projet/', projet._id, 'view']" class="btn btn-info">Détails</a>&nbsp;&nbsp;
+                  <a href="#" [routerLink]="['/projet/', projet._id, 'edit']" class="btn btn-primary">Modifier</a>&nbsp;&nbsp;
+                  <button type="button" (click)="deleteProjet(projet._id)" class="btn btn-danger">Supprimer Data</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+              <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+
+
+
+
+
+
+</div>
+  
+  
+  
+  
+  
+  
+  
+              
+  
+  
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+<app-adminfooter></app-adminfooter>
